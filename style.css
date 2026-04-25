@@ -1,10 +1,79 @@
+:root {
+  --color-accent: oklch(0.2653 0.1052 282.43);
+}
+
+html {
+  accent-color: var(--color-accent);
+}
+
 body {
-  /* Set line height to 1.5 times the font size
-	   and use the OS’s UI font as the website font
-	 */
   font: 100%/1.5 system-ui;
+  max-width: 100ch;
+  margin-inline: max(1em, (100% - 100ch) / 2);
+  padding: 1ch;
 }
 
 .home-img {
   max-width: 25%;
+}
+
+nav {
+  display: flex;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: oklch(0.7 0.1052 282.43);
+  margin-bottom: 1ch;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.5em;
+}
+
+.current {
+  flex: 1;
+  border-bottom-width: 0.4em;
+  border-bottom-style: solid;
+  border-bottom-color: inherit;
+  background-color: oklch(from var(--color-accent) 95% 5% h);
+}
+
+.nav-item {
+  flex: 1;
+}
+
+.nav-item:hover {
+  border-bottom-width: 0.4em;
+  border-bottom-style: solid;
+  border-bottom-color: var(--color-accent);
+  background-color: oklch(from var(--color-accent) 95% 5% h);
+}
+
+/* CONTACT PAGE STYLING */
+
+form {
+  font: inherit;
+}
+
+input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  margin-block: 5px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  display: block;
 }
