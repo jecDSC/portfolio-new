@@ -85,6 +85,7 @@ button {
 }
 
 /* PROJECT PAGE STYLING */
+
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
@@ -111,10 +112,6 @@ h2 {
   margin: 0;
 }
 
-h3 {
-  line-height: 1.1;
-}
-
 h4 {
   line-height: 1.1;
 }
@@ -125,4 +122,23 @@ h5 {
 
 h6 {
   line-height: 1.1;
+}
+
+/* CV PAGE STYLING */
+
+.cv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cv-sec {
+  margin-bottom: 75px;
+}
+
+.exp {
+  margin-bottom: 15px;
+}
+
+h3 {
+  line-height: 0.1;
 }
