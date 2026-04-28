@@ -11,6 +11,7 @@ body {
   max-width: 100ch;
   margin-inline: max(1em, (100% - 100ch) / 2);
   padding: 1ch;
+  background-color: oklch(0.8078 0.0201 284.49);
 }
 
 .home-img {
@@ -76,4 +77,47 @@ textarea {
 
 button {
   display: block;
+}
+
+/* PROJECT PAGE STYLING */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 3em;
+}
+
+.proj-img {
+  display: block;
+  margin: auto;
+  width: 280px;
+  height: 150px;
+  object-fit: cover;
+}
+
+h1 {
+  line-height: 1.1;
+  font-size: 400%;
+}
+
+h2 {
+  line-height: 1.1;
+  margin: 0;
+}
+
+h3 {
+  line-height: 1.1;
+}
+
+h4 {
+  line-height: 1.1;
+}
+
+h5 {
+  line-height: 1.1;
+}
+
+h6 {
+  line-height: 1.1;
 }
