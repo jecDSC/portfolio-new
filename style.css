@@ -206,6 +206,10 @@ h6 {
   line-height: 1.1;
 }
 
+#proj-desc {
+  font-size: 115%;
+}
+
 /* CV PAGE STYLING */
 
 .cv {
