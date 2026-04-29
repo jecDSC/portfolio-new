@@ -95,12 +95,16 @@ nav a {
   background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
-label {
+label.color-scheme {
   position: absolute;
   top: 1em;
   right: 1em;
   font-size: 80%;
   font-family: parent;
+}
+
+hr.banner {
+  margin-bottom: 25px;
 }
 
 /* HOME PAGE STYLING */
@@ -182,6 +186,7 @@ button {
 h1 {
   line-height: 1.1;
   font-size: 400%;
+  margin-bottom: 10px;
 }
 
 h2 {
