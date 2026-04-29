@@ -1,9 +1,43 @@
 :root {
   --color-accent: oklch(0.2653 0.1052 282.43);
+  --bg-color: oklch(0.94 0.01 285);
+  --text-color: oklch(0.28 0.02 280);
+  --surface-color: color-mix(in oklch, var(--color-accent), white 92%);
 }
 
 html {
   accent-color: var(--color-accent);
+  color-scheme: light dark;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg-color: oklch(0.94 0.01 285);
+  --text-color: oklch(0.28 0.02 280);
+  --surface-color: color-mix(in oklch, var(--color-accent), white 92%);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-color: oklch(0.19 0.015 280);
+  --text-color: oklch(0.93 0.015 285);
+  --surface-color: color-mix(in oklch, var(--color-accent), black 75%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] {
+    --bg-color: oklch(0.19 0.015 280);
+    --text-color: oklch(0.93 0.015 285);
+    --surface-color: color-mix(in oklch, var(--color-accent), black 75%);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root[data-theme="auto"] {
+    --bg-color: oklch(0.94 0.01 285);
+    --text-color: oklch(0.28 0.02 280);
+    --surface-color: color-mix(in oklch, var(--color-accent), white 92%);
+  }
 }
 
 body {
@@ -11,7 +45,8 @@ body {
   max-width: 100ch;
   margin-inline: max(1em, (100% - 100ch) / 2);
   padding: 1ch;
-  background-color: oklch(0.8078 0.0201 284.49);
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .home-img {
@@ -27,8 +62,10 @@ nav {
   display: flex;
   border-bottom-width: 2px;
   border-bottom-style: solid;
-  border-bottom-color: oklch(0.7 0.1052 282.43);
+  border-bottom-color: var(--border-color);
   margin-bottom: 1ch;
+
+  --border-color: oklch(0.7 0.1052 282.43);
 }
 
 nav a {
@@ -43,7 +80,7 @@ nav a {
   border-bottom-width: 0.4em;
   border-bottom-style: solid;
   border-bottom-color: inherit;
-  background-color: oklch(from var(--color-accent) 95% 5% h);
+  background-color: var(--surface-color);
 }
 
 .nav-item {
@@ -53,8 +90,26 @@ nav a {
 .nav-item:hover {
   border-bottom-width: 0.4em;
   border-bottom-style: solid;
-  border-bottom-color: var(--color-accent);
-  background-color: oklch(from var(--color-accent) 95% 5% h);
+  border-bottom-color: var(--border-color);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+}
+
+label {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  font-size: 80%;
+  font-family: parent;
+}
+
+/* HOME PAGE STYLING */
+
+.intro {
+  margin-top: 0;
+}
+
+#stats {
+  margin-top: 50px;
 }
 
 /* CONTACT PAGE STYLING */
