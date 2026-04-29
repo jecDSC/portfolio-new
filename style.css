@@ -56,6 +56,7 @@ body {
 .home {
   display: flex;
   gap: 10px;
+  margin-bottom: 50px;
 }
 
 nav {
@@ -108,8 +109,29 @@ label {
   margin-top: 0;
 }
 
-#stats {
-  margin-top: 50px;
+#stat-box {
+  border-style: dotted;
+  padding: 5px;
+}
+
+dl.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem 1rem;
+}
+
+dl.stats dt {
+  grid-row: 1;
+  margin: 0;
+  font-size: 150%;
+  font-weight: 600;
+}
+
+dl.stats dd {
+  grid-row: 2;
+  margin: 0;
+  font-size: 125%;
+  font-weight: 500;
 }
 
 /* CONTACT PAGE STYLING */
